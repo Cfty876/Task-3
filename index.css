@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
+    
+    --sidebar-bg: #D5F4F6;
+    --sidebar-active: #B1ECED;
+    --sidebar-divider: #87E6E8;
+    --sidebar-text: #222222;
+    
+    --primary: #007C81;
+    --primary-foreground: #FFFFFF;
+    
+    --secondary: #EFFDFE;
+    --secondary-foreground: #222222;
+    
+    --muted: #F5F5F5;
+    --muted-foreground: #666666;
+    
+    --accent: #007C81;
+    --accent-foreground: #FFFFFF;
+    
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    
+    --border: #E5E5E5;
+    --input: #007C81;
+    --ring: #007C81;
+    
+    --card: #FFFFFF;
+    --card-foreground: #222222;
+    
+    --popover: #FFFFFF;
+    --popover-foreground: #222222;
+    
+    --radius: 8px;
+    
+    --gryffindor: #FF6B35;
+    --slytherin: #007C81;
+    --ravenclaw: #5B7C99;
+    --hufflepuff: #F7B731;
+    
+    --task-easy-bg: #EFFDFE;
+    --task-medium-bg: #FFF4E6;
+    --task-hard-bg: #FFE5E5;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 95%;
+    
+    --sidebar-bg: #1A3A3C;
+    --sidebar-active: #2A4A4C;
+    --sidebar-divider: #3A5A5C;
+    --sidebar-text: #F0F0F0;
+    
+    --primary: #00A8AF;
+    --primary-foreground: #FFFFFF;
+    
+    --secondary: #1F2937;
+    --secondary-foreground: #F0F0F0;
+    
+    --muted: #1F2937;
+    --muted-foreground: #9CA3AF;
+    
+    --accent: #00A8AF;
+    --accent-foreground: #FFFFFF;
+    
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    
+    --border: #374151;
+    --input: #374151;
+    --ring: #00A8AF;
+    
+    --card: #1F2937;
+    --card-foreground: #F0F0F0;
+    
+    --popover: #1F2937;
+    --popover-foreground: #F0F0F0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Arial', sans-serif;
+    color: #222222;
+  }
+  
+  .font-mont {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+  }
+}
+
+@layer utilities {
+  .sidebar-gradient {
+    background: var(--sidebar-bg);
+  }
+  
+  .sidebar-active {
+    background: var(--sidebar-active);
+  }
+  
+  .sidebar-divider {
+    border-color: var(--sidebar-divider);
+  }
+}
